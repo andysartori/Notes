@@ -160,7 +160,24 @@ squares.indexOf(4); // tells you index of
 squares.reverse();//reverse order of the array
 squares[1] = 9 // change index 1 to value 9 also add element to an array like this.
 squares.push(); // adds element to end of an array if you don't know exact length
-console.log(squares) // prints squares array in console
+squares.sort(); // makes alphabetical
+squares.pop(); // removes last element of an array
+console.log(squares); // prints squares array in console
+squares.shift(); // removes first item of an array
+squares.unshift(); // adds one or more elements to beggining of array squares.unshift(4,5) adds 4 and 5 to beginning of the array so [4, 5, 1, 4, 9, 25]
+squares.slice(1, 3); // returns only elments 1 and 3 as a new array in a new variable so original array will not be changed
+squares.splice(2,2); // at position 2 remove 2 items
+squares.splice(2, 1, 'Lemon', 'kiwi') // at position 2 add the new items and remove 1 item
+squares.splice(2, 0, 'Lemon', 'kiwi') // at position 2 add the new items and remove 1 item
+var furniture = [["chair", "door"], ["dresser", "bed"]]; // multi-deminsional array
+console.log(furniture[1][0]); // access dresser in the array
+
+// selecting a random array item
+var selectFruit = ["Apple", "Orange", "Banana", "Cherry"];
+var pickAFruit = function () {
+var todaysFruit = selectFruit[Math.floor(Math.random() * 4)];
+return todaysFruit;
+};
 
 
 
