@@ -45,7 +45,7 @@ OPERATORS
 var num = 4;
 num = num + num; /*same as*/ num += num
 num = num * num /*same as*/ num *= num
-num++ // postfix increment
+num++ // postfix increment by one
 var num = 5; // postix set the variable to a number
 y = num++; // define a new variable adding postfix, returns value before incementing
 console.log(num); //
@@ -55,7 +55,7 @@ RANDOM NUMBERS
 Math.random(); // get random deciman between 0 and 1
 Math.random() * 10; // random decimal between 0 and 10 (excluding 0 and 10)
 Math.floor(Math.random() * 11); // whole number between 0 and 10 including 0 and 10. Rounding down with math.floor
-Maath.floor(Math.random() * 10) + 1; // whole number between 1 and 10 rounding down
+Math.floor(Math.random() * 10) + 1; // whole number between 1 and 10 rounding down
 Math.sqrt(Math.PI); // square pi
 Math.pow(5,4);// 5 to the power of 4
 
@@ -172,7 +172,7 @@ squares.splice(2, 0, 'Lemon', 'kiwi') // at position 2 add the new items and rem
 var furniture = [["chair", "door"], ["dresser", "bed"]]; // multi-deminsional array
 console.log(furniture[1][0]); // access dresser in the array
 
-// selecting a random array item
+// selecting a random array item (currently not working )
 var selectFruit = ["Apple", "Orange", "Banana", "Cherry"];
 var pickAFruit = function () {
 var todaysFruit = selectFruit[Math.floor(Math.random() * 4)];
@@ -180,32 +180,56 @@ return todaysFruit;
 };
 
 
+
 LOOPS
-//count to 1000. We use loops to repeat code
+//For loop count to 1000. We use loops to repeat code
 for (var num=5; num <= 100; num ++) {
   console.log(num);
 }
 
-// while loop runs as long as boolean is true. 1)A while needs a way to stop running 2)Variable we plugin into the while loop is defined before the loop
+//For loop reverse loop where instead of increment there is a decrement
+for (var num=100; num > 0; num--) {
+    console.log(num);
+}
+
+// While loop runs as long as boolean is true. 1)A while needs a way to stop running 2)Variable we plugin into the while loop is defined before the loop
 var num = 5;
 while (num <= 100) {  //while boolean exrpession stays true
   console.log(num);
   num++
 }
 
+// While loop with conditionals inside 
+var count = 50;
+
+while (count > 0) {
+
+    if (count === 25) {
+        console.log('Whooaao, we\'re halfway there . . .');
+    }
+
+    console.log(count);
+    count--;
+}
+
+console.log('WhoaaAAo, livin\' on a prayer!');
 
 
+// For loop used for accessing elements of an array. this for loop prints each item in the console
+var bigLifts = ["Squats", "Deadlits", "Bench Press", "T-Bar Rows"];
+for (var num=0; num < bigLifts.length; num++) {
+  console.log(bigLifts[num])
+}
 
 
-
-
-
-
-
-
-
-
-
+// For loop terminate the for loop by using break
+for (num = 0; num < 100, num++) {
+  if (i === 3) {     // use break to exit a loop befor it has fnished. This loop will terminate when the iterator gets to 3
+    break;
+  }
+  console.log(num);
+}
+console.log('the loop has ended');
 
 
 
