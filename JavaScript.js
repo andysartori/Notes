@@ -136,7 +136,7 @@ if (input == 'andy') {
   console.log ('Else Block');
 }
 
-/*Buy Beer Example*/
+/*Buy Beer Example*///Use Case for conditionals so skip lines of code in the block
 prompt('What is your age');
 var input = prompt( );
 
@@ -178,6 +178,20 @@ var pickAFruit = function () {
 var todaysFruit = selectFruit[Math.floor(Math.random() * 4)];
 return todaysFruit;
 };
+
+
+LOOPS
+//count to 1000. We use loops to repeat code
+for (var num=5; num <= 100; num ++) {
+  console.log(num);
+}
+
+// while loop runs as long as boolean is true. 1)A while needs a way to stop running 2)Variable we plugin into the while loop is defined before the loop
+var num = 5;
+while (num <= 100) {  //while boolean exrpession stays true
+  console.log(num);
+  num++
+}
 
 
 
