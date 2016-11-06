@@ -1,6 +1,7 @@
 CHROME CONSOLE
 about:blank // opens blank chrome window
 option + command + J // open javascript console
+console.log // sends message to console. Good for debugging
 
 PRIMITIVE DATATYPES
 'string' //strings
@@ -150,6 +151,16 @@ if (input > 21) {
 }
 
 
+ARRAY // array is a list store in a variable
+var list = ['chari', 'table', 'candle']; // array contains elements. elements can be any primitive data type
+var squares = [1, 4, 9, 25]; // each element in array has a number called index(place in the array)
+console.log(squares[0]); // returns 1st value array
+console.log(squares.length); // returns length array
+squares.indexOf(4); // tells you index of
+squares.reverse();//reverse order of the array
+squares[1] = 9 // change index 1 to value 9 also add element to an array like this.
+squares.push(); // adds element to end of an array if you don't know exact length
+console.log(squares) // prints squares array in console
 
 
 
