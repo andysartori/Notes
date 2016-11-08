@@ -6,6 +6,9 @@ console.log // sends message to console. Good for debugging
 PRIMITIVE DATATYPES
 'string' //strings
 2 // numbers or digits
+Boolean // true/false statements
+undefined//
+null //
 var item = 'chair' // variables can equal strings or numbers, cannot begin with a number or include special characters, are camelCase, case sensitive
 variable1 = variable2   // JavaScript evaluates from right to left
 
@@ -168,7 +171,7 @@ squares.unshift(); // adds one or more elements to beggining of array squares.un
 squares.slice(1, 3); // returns only elments 1 and 3 as a new array in a new variable so original array will not be changed
 squares.splice(2,2); // at position 2 remove 2 items
 squares.splice(2, 1, 'Lemon', 'kiwi') // at position 2 add the new items and remove 1 item
-squares.splice(2, 0, 'Lemon', 'kiwi') // at position 2 add the new items and remove 1 item
+squares.splice(2, 0, 'Lemon', 'kiwi') // at position 2 add the new items and remove 0 item
 var furniture = [["chair", "door"], ["dresser", "bed"]]; // multi-deminsional array
 console.log(furniture[1][0]); // access dresser in the array
 
@@ -183,7 +186,7 @@ return todaysFruit;
 
 LOOPS
 //For loop count to 1000. We use loops to repeat code
-for (var num=5; num <= 100; num ++) {
+for (var num=5; num <= 100; num ++) { // num can be x or i, can be whatever I want
   console.log(num);
 }
 
@@ -199,7 +202,7 @@ while (num <= 100) {  //while boolean exrpession stays true
   num++
 }
 
-// While loop with conditionals inside 
+// While loop with conditionals inside
 var count = 50;
 
 while (count > 0) {
@@ -232,75 +235,57 @@ for (num = 0; num < 100, num++) {
 console.log('the loop has ended');
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-FUNCTIONS
-
-
-CONDITIONALS (IF THEN WILL SKIP LINES OF CODE)
-
+FUNCTIONS // another form of control flow with conditionals and loops
 LOOPS (WILL REPEAT WHAT IS IN THE BLOCKS)
+CONDITIONALS (IF THEN WILL SKIP LINES OF CODE)
+FUNCTIONS (STORE CODE WITHIN {} SO WE CAN USE IT LATER) // store code within a block so we can use it later (cathing a pokemon and using him later)
 
-FUNCTIONS (STORE CODE WITHIN {} SO WE CAN USE IT LATER)
 
 
-WRITE FUNCTION THAT LOGS "THIS FUNCTION" TO THE CONSOLE & INVOKE
+// write a function that logs "gotta catch em all"
 var list = function () {
-  console.log('this function'); //saved message in function stored code inside {} to use later
+  console.log('gotta catch \'em all'); //saved message in function stored code inside {} to use later
 }
-list(); //this will run code/invoking function
+list(); //this will run code/invoking function (letting pokemon out temporarily) have to have parentheses.
 
-WRITE FUNCTIION LOGS SUM OF 2 + 2
+// function logs sum of 2
 var list = function () {
   console.log(2+2);
 }
 list();
 
-FUNCTION TAKES PARAMETER
+PARAMATERS AND ARGUMENTS// In a function
 var nameIt = function(name) {  //paramater or variable name is between parentehses
   console.log('Hi. I am ' + name);
 }
-nameIt("Mike") // mike is the argument (argument is data we supply to the function) this is what we supply to our function.
+nameIt("Mike"); // Inside parenteheses put the value of the paramater also called argument . Mike is the argument (argument is data we supply to the function).
+nameIt('lee');
+nameIt('sam'); // we can invoke function with whatever arguments we want
 
-FUNCTION WITH MULTIPLE PARAMATERS
+// multiple paramaters
 var multiply = function (num1, num2) {    // 2 paramaters in ()
   console.log(num1 * num2);
 }
 multiply(5, 4) // must have 2arguments here
-
-FUNCTION THAT TAKES PARAMATERS(NUMBERS) AND MAKES IT INTO A STRING
-var multiply = multiply.toString();
-
-FUNCTION TAKES 2 PARAMATERS AND CONSOLE.LOGS WHETHER 2 STRINGS ARE IDENTICAL
+var multiply = multiply.toString(); // Takes paramaters and make into a string
 
 
-FUNCTION RETURN STATEMENT //STOPS FUNCTION IN ITS TRACKS SO SUBSEQUENT CODE WON'T RUN
-var ten = function() {
-  return 10;  // stops function in its tracks  console.log(10) will not work
-}
-console.log(ten()+8);
 
 
+FUNCTION RETURN //return gives function its value or stops function
 var example = function(input) {
-  if (input == "none") {
-    return 0;               // quits out of function and immediately gives function it's value of 0 immeditely won't run below code
-  }
-    return 1;
-}
-console.log(example("none")); // this will return 0
+    if (input == "none") {
+        return 0; // sends value of function  immediately and quits it so code below not returned
+    } else {  // else { not needed here
+        return 1; // sends value function immediately
+    }
+};
+example('none');//invoke function with argument none
+example('two'); // invoke function with argument two
+example // run with no parentheses function itself appears - this is called referring a function
+console.log(example("none")); // to see result of an invoked functon console log it.
 
-
-FUNCTION 2 PARAMATERS RERUENS FIRST PARAMATER EVALUATED POWER SECOND PARAMATER
+// two paramaters
 var toThePower = function(num1, num2) {
   return(Math.pow(num1, num2));
 }
@@ -313,47 +298,15 @@ var plusOne = function(num1,num2) { //takes return of previous function adds one
 
 FUNCTION PALINDROME
 var palindrome = function(word) {
-  var reversedWord = word.split('').reverse().join(''); // reverse() only works on array;
-       //return whetehr the word is the same as the reverse of that word (comparison)
-       // word === reverse word
-  return word;
+ var reversedWord = word.split('').reverse().join(''); // reverse() only works on array;
+  if (word == reversedWord) { // compare words
+    return true;
+  }
+    return false ;
 }
 console.log(palindrome("radar"));
 
-ARRAYS CONCATINATING
-var andyArray = ['hello', 'world', 'tennis', 'fiat'];
-    console.log('my first item is' + andyArray[0] ); //concatinating
-    console.log('my first item ${andyArray[0]}') // also concatinates
 
-ARRAY MULTIDIMENSIONAL
-var thomsCloset = [
-      [
-        // These are Thom's shirts
-        "grey button-up",
-        "dark grey button-up",
-        "light blue button-up",
-        "blue button-up",
-      ],[
-        // These are Thom's pants
-        "grey jeans",
-        "jeans",
-        "PJs"
-      ],[
-        // Thom's accessories
-        "wool mittens",
-        "wool scarf",
-        "raybans"
-      ]
-    ];
-console.log(thomsCloset[0]);
-console.log('Thom's wears ${thomsCloset[1][2]}); //find thom's grey button up
-var thomsBedPants = thomsCloset[1][2];
-console.log(thomsBedPants);
-
-thomsBedPants = "adult onsie";
-console.log(thomsBedPants);
-
-console.log
 
 
 FUNCTION SYNTAX
@@ -373,3 +326,136 @@ var greeting = function (name, time) {
 }
 
 greeting("Thom", "afternoon"); // calling function greeting putting thom in variable name , taking afternoon and comparing it to "morning"
+
+//build calculator
+var calc = function (num1, num2, operation) {
+  if (operation === "add") {
+    return num1 + num2;
+  } else if (operation === "sub") {
+    return num1 - num2;
+  } else if (operation === "mult") {
+    return num1 * num2; {
+  } else if (operation === "div") {
+    return num1 / num2;
+  } else if (operation === "exp") {
+    return Math.pow(num1, num2);
+  }
+}
+console.log(calc(4,3, "mult"));
+
+
+OBJECTS // is a variable that sotres data with great specifiicty. Objects delcared using {}. Objects use . notation, they do not use index values.
+var dog = {
+  name: ('tom'), // name = key and 'tom' = value/property. The key has to be unique, value can be any datatype
+  age: ('5') // age = key and '5' = value
+}
+console.log(dog); // we can print entire object
+console.log(dog.name); // we can print just a value
+
+// adding key value pairs to previusly exigint ojects or changing key value pairs
+var house = {
+  doors: 9
+}
+console.log(house);
+house.windows = 30;
+console.log(house);
+house.squarefootage = 300;
+console.log(house);
+
+// nest data in object
+var adventure = {
+  name: ('Timothy'),
+  hitpoints: 13,
+  belongings: ['sword', 'poiton', 'tums'],
+}
+console.log(adventure);
+console.log(adventure.belongings[2]);
+
+// nest data in object
+var adventure = {
+  name: ('Timothy'),
+  hitpoints: 13,
+  belongings: ['sword', 'poiton', 'tums'],  // array is a list
+  companion: {name: 'velma', type: 'bat'}  // object has more information
+}
+console.log(adventure);
+console.log(adventure.belongings[2]);
+console.log(adventure.companion); // only console logging companion object
+console.log(adventure.companion.name); // access velma inside of object
+adventure.companion.name = 'susan'
+
+// in class activity
+var user = {
+  name: ('andy'),
+  email: ('andysartori04@gmail.com'),
+  age: 24,
+  purchased: [],
+}
+user.email = "andrewsartori@yahoo.com"; // change email
+user.age = user.age + 1; // add age
+user.location = "California"; // add location
+user.purchased.push('carbohydrates');
+user.purchased.push('peace of mind');
+user.purchased.push('merino jodhpurs');
+
+user.friend = {
+  name: 'Grace Hopper',
+  age: 85,
+}
+
+var updateUser = function(){
+  user.age++; // destructive process, changes in place
+  user.name = user.name.toUpperCae(); // alters in memory but does not actualy alter value in sdie object set =
+}
+udateUser();
+console.log(user);
+
+
+SCOPES
+// Global variable calls function
+var test = 'I am here'; // global variable
+var iSeeYou = function () {
+  return test;
+}
+console.log(iSeeYou());
+
+//Hidden variable
+var test = function () {
+  var example = 'I can not see you';
+}
+
+var iCanNotSeeYou = function () {
+  return example;
+}
+test(); //invoke
+console.log(iCanNotSeeYou());
+
+
+//Function within a function. Value will be visible
+item = 'chari';
+var outerFunction = function () {
+  var test = "yippee";
+  var innerFunction = function() {
+    console.lg(test);
+  }
+  innerFunction();
+}
+outerFunction();
+
+
+//
+var parent = function () {
+  var parentVar = false;
+  var child = function () {
+    console.log(parentVar);
+    var childVar = true;
+  }
+  child();
+  console.log(childVar); // not avialable childvar locked inside of {}
+}
+parent ();
+
+// why we use var?
+var someFunc = function() {
+  var item = 'chair'; //var keeps chair inside function. var is what gives variables the scope. Always keep variable locked in functions so you don't pollute your global scope.
+}
